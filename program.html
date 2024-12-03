@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+        margin: 0;
+padding: 0;
+box-sizing: border-box;
+    }
+    .container{
+        height: 80vh;
+        width: 30vw;
+        background-color: aqua;
+        margin: auto;
+        border-radius: 10px;
+        margin-top :40px;
+        padding: 40px;
+        padding-left: 70px;
+    }
+    .Sub{
+        padding: 10px;
+        margin: auto;
+        margin-left:60px ;
+    }
+    #load{
+        color: gray;
+    }
+    h1{
+        color: chocolate;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Temperature Converter</h1><br><br>
+        <label for="number">Enter the value </label>
+<input type="number" name="a1" id="enter"><br><br>
+<input type="radio" name="a2" id="click1">
+<label for="radio">Convert from Fahrenheit ➡️ Celsius</label><br><br>
+<input type="radio" name="a2" id="click2">
+<label for="radio">Convert from Celsius ➡️ Fahrenheit </label>
+<br><br>
+<div class="Sub">
+<button id="btn">Convert</button><br><br>
+<div id="result">Result ⬇️</div><br>
+<div id="load">loading.....</div>
+</div>
+    </div>
+    <script>
+      let Enter = document.getElementById("enter") ;
+       let circle1 = document.getElementById("click1");
+       let circle2 = document.getElementById("click2");
+       let btn = document.getElementById("btn");
+       let output = document.getElementById("load");
+    btn.addEventListener("click",function(){
+        let result;
+           if(Enter.value == "") alert("Enter the value");
+           else if(circle1.checked) {
+            result = 5*(Enter.value - 32)/9;
+            output.innerHTML = `${result.toFixed(2)}<sup>o</sup>C`;
+           }
+           else{
+            result = (9*Enter.value)/5 + 32;
+            output.innerHTML = `${result.toFixed(2)}<sup>o</sup>F`;
+           };
+    })
+    </script>
+</body> 
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script src="/arrayjs.js">
+
+
+    let arr=[];
+    let arrLength=Number(prompt('Enter the length of values'));
+    for(let i=0 ; i<arrLength ;i++){
+        arr[i]= prompt('Enter the values');
+    }  
+    let str= "";
+    for(let i=0; i<arrLength ;i++){
+        str += `${arr[i]} `;
+    }
+
+    alert(str);
+
+    // let array =[2,true,'Rahul',4,5,NaN,false,'str',8];
+    // let sum =0;
+    // for(let i=0;i<array.length;i++){
+    //     sum += array[ i ];
+    // }
+    // console.log('sum: ',sum);
+
+ 
+//     let string='naman';
+//     function isPalindrome(str){
+//         let left=0;
+//         let rigth=str.length-1;
+//         while(left<rigth){
+//             if(str(left)!==str(rigth)){
+//                 return false;
+//             }
+//             left++;
+//             rigth--;
+//         }
+//         return true;
+//     }
+// console.log(isPalindrome(string));
+
+// let str = prompt('Enter the palindrome value');
+// function isPalindrome(str) {
+//     let j = str.length - 1
+//     for (let i = 0; i < str.length; i++) {
+//         if (str[i] != str[j]) {
+//             return false;
+//         }
+//         j--;
+//     }
+//     return true;
+// }
+// alert('str');
+// const str = prompt('Enter the string');
+// let len=str.length;
+// let newString =" ";
+
+// for(let i= len-1;i>=0;i--){
+//     newString += str.at(i);
+// }
+// if(newString == str) alert('String is Palindrome')
+// else alert('String is not Palindrome') ;
+
+
+
+
+
+
+
+   </script> 
+</body>
+</html>

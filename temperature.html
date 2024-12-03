@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 40%;
+            height: 90vh;
+            margin: auto;
+            margin-top: 30px;
+            border: 2px solid red;
+            text-align: center;
+            padding: 20px;
+        }
+        .div{
+            margin-top: 30px;
+        }
+        .div1{
+            margin-top : 30px;
+            line-height: 30px;
+        }
+        button{
+            margin-top: 30px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Temperature converter</h1>
+        <div class="div">
+            <label for="enter">Enter value:</label>  <input type="text" name="a2" id="enter">
+        </div>
+        <div class="div1">
+            <input type="radio" name="a1" id="check1" checked> <label for="check1">Convert F ➡️ C</label>  <br>
+            <input type="radio" name="a1" id="check2"> <label for="check2"> Convert C ➡️ F</label>
+        </div>
+        <button id="btn">Convert</button> 
+        <div id="result"> </div>
+    </div>
+    <script>
+        let Enter = document.getElementById("enter");
+        let Click1 = document.getElementById("check1");
+        let Click2 = document.getElementById("check2");
+        let btn = document.getElementById("btn");
+        let output = document.getElementById("result");
+        btn.addEventListener("click", function(){
+        //     if(Enter.value == ''){
+        //         alert("Enter the value");
+        //     }
+        //    else if(Click1.checked){
+        //     console("hi");
+        //      let generatedArea1 = 5*(Enter.value - 32)/9 ;
+        //      console.log(generatedArea1)
+        //      result.innerHTML =  `${generatedArea1}<sup>o</sup>F`
+        //    }
+        //    else{
+        //     console("hi2");
+
+        //     let generatedArea2 = 9*(Enter.value + 32)/5;
+        //     result.innerHTML =  `${generatedArea2}<sup>o</sup>C`
+        //    }
+        let result;
+           if(Enter.value == "") alert("Enter the value");
+           else if(Click1.checked) {
+            result = 5*(Enter.value - 32)/9;
+            output.innerHTML = `${result.toFixed(2)}<sup>o</sup>C`;
+           }
+           else{
+            result = (9*Enter.value)/5 + 32;
+            output.innerHTML = `${result.toFixed(2)}<sup>o</sup>F`;
+           };
+
+           
+           
+           
+        })
+    </script>
+</body>
+</html>
